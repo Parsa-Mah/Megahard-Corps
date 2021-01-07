@@ -29,12 +29,7 @@ public class GameTime : MonoBehaviour
         StartCoroutine(TimeConcept());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    //This Adds a Time Concept for my Game
     IEnumerator TimeConcept()
     {
         while (true)
@@ -54,10 +49,9 @@ public class GameTime : MonoBehaviour
                 }
             }
 
-            yield return new WaitForSecondsRealtime(1f);
+            yield return new WaitForSeconds(1f);
         }
     }
-
 
     private void ExecuteEverySeconds()
     {
@@ -72,7 +66,7 @@ public class GameTime : MonoBehaviour
     {
         if (!isProjectDone)
         {
-            progressSystem.Progress(10);
+            progressSystem.BeginePhase1();
         }
     }
 
